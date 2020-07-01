@@ -4,7 +4,7 @@ import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.impl.DefaultCamelContext;
 
-public class CopiaArquivo {
+public class CopiaArquivoComLog {
 
     public static void main(String[] args) {
         CamelContext contexto = new DefaultCamelContext();
@@ -14,7 +14,8 @@ public class CopiaArquivo {
                 @Override
                 public void configure() throws Exception {
                     from("file:dados/entrada?noop=true") // sem esse noop, sera criado um diretorio .camel na origem
-                     .to("file:dados/saida");
+                            .to("log:?level=INFO&showBody=true&showHeaders=true")
+                            .to("file:dados/saida");
                 }
             });
 
