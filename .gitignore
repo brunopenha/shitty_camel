@@ -2,6 +2,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/maven,intellij,intellij+all,intellij+iml,eclipse,android,androidstudio,macos,windows,linux,java,gradle,netbeans,flutter,dart
 # Edit at https://www.toptal.com/developers/gitignore?templates=maven,intellij,intellij+all,intellij+iml,eclipse,android,androidstudio,macos,windows,linux,java,gradle,netbeans,flutter,dart
 
+saida/
+
 ### Android ###
 # Built application files
 *.apk
