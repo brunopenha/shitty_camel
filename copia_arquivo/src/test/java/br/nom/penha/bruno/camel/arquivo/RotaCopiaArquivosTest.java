@@ -23,6 +23,6 @@ public class RotaCopiaArquivosTest extends CamelTestSupport {
 
         assertTrue(saida.isDirectory());
         assertEquals(new File("dados/entrada").listFiles().length, saida.listFiles().length);
-        
+
     }
 }
