@@ -9,7 +9,7 @@ public class RotaProcessadoraModificaArquivos extends RouteBuilder {
         from("file:dados/entrada?noop=true")
         .log("Lendo o arquivo com o corpo |${body}| e os cabeçalhos |${headers}|")
         .process(new ExemploProcessadorArquivo())
-        .to("file:dados/saida?FileName= saida.txt")
+        .to("file:dados/saida?FileName=saida.txt")
         .to("mock:saida");
 
     }
