@@ -28,6 +28,12 @@ public class RotaPadraoContentBasedRouterTest extends CamelTestSupport {
         File diretorioJson = new File("saida/json");
         assertTrue(diretorioJson.isDirectory());
 
+        File diretorioFormatoDesconhecido = new File("saida/9_desconhecido");
+        assertTrue(diretorioFormatoDesconhecido.isDirectory());
+
+        File diretorioComTodosOsArquivos = new File("saida/0_todosOsArquivos");
+        assertTrue(diretorioComTodosOsArquivos.isDirectory());
+
 
     }
 }
