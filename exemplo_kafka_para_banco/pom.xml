@@ -4,9 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>br.nom.penha.bruno.camel</groupId>
-    <artifactId>padrao_eip_aggregator</artifactId>
+    <groupId>br.nom.penha.bruno.camel.kafka</groupId>
+    <artifactId>exemplo-kafka-para-banco</artifactId>
     <version>1.0-SNAPSHOT</version>
+
 
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -79,14 +80,12 @@
             <version>${kafka.versao}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.kafka/connect-api -->
-        <!--Kafka Connector -->
+        <!--Kafka -->
         <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>connect-api</artifactId>
-            <version>2.4.1</version>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-kafka</artifactId>
+            <version>${kafka.versao}</version>
         </dependency>
-
 
         <!-- Para tratar Testes -->
 
@@ -94,10 +93,7 @@
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-test</artifactId>
             <version>2.25.1</version>
-            <scope>test</scope>
+            <scope>${kafka.versao}</scope>
         </dependency>
     </dependencies>
-
-
-
 </project>
